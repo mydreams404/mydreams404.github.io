@@ -94,7 +94,7 @@ svg {
 
 #title-container {
   position: relative;
-  top: 30%;
+  top: 35%;
   width: 800px;
   height: 80%;
   margin: 0 auto;
@@ -123,7 +123,7 @@ svg {
   outline: none;
   color: var(--lightblue);
   opacity: 0;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .tablink:hover {
