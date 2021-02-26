@@ -1,0 +1,209 @@
+:root {
+  --white: #F9F7F1;
+  --green: #266320;
+  --coral: #EE7674;
+  --lightblue: rgb(168, 235, 237);
+  --navy: #283B53;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  --background-color: var(--white);
+  --border-color: var(--background-color);
+  font-family: "Times New Roman", Times, Serif;
+  margin: 0;
+  transition: 1s;
+  background-color: var(--background-color);
+  border-color: var(border-color);
+  overflow-x: hidden;
+  color: var(--navy);
+}
+
+body.dark {
+  --background-color: var(--navy);
+  border-color: var(--navy);
+  color: var(--lightblue);
+}
+
+div {
+  margin: 0;
+}
+
+p {
+  z-index: -1;
+  text-align: justify;
+  margin-right: 20px;
+  margin-left: 15px;
+}
+
+h1 {
+  text-align: center;
+  color: var(--green);
+}
+
+h2 {}
+
+h3 {
+  margin-left: 15px;
+}
+
+hr {
+  height: 0px;
+  opacity: 0;
+  border-top: solid;
+  border-width: 0.5px;
+  color: black;
+  background-color: red;
+  border-color: var(--lightblue);
+  margin-bottom: -20px;
+  animation-name: menu-load;
+  animation-delay: 10s;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+}
+
+svg {
+  fill: var(--white);
+}
+
+.menu-container {
+  position: absolute;
+  height: 100%;
+  /* pointer-events: none; */
+}
+
+.content-header {
+  /*JUST DO TEXT STROKE IN P5JS*/
+  color: var(--lightblue);
+  margin-left: 10px;
+  /* text-shadow: var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px, var(--lightblue) 0px 0px 1px,
+  var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,
+  var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px; */
+}
+
+#particle-container {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  pointer-events: none;
+}
+
+#title-container {
+  position: relative;
+  top: 30%;
+  width: 800px;
+  height: 80%;
+  margin: 0 auto;
+}
+
+.tab-container { /*make a rect with same bg colour?*/
+  z-index: 1;
+  position: -webkit-sticky;
+  position: sticky;
+  top: 5%;
+  /* background-color: var(--navy); */
+}
+
+.tablink {
+  /* position: sticky;
+  top: 5%; */
+  font-family: "Georgia", Times, Serif;
+  background-color: var(--background-color);
+  border: solid;
+  border-color: rgba(0, 0, 0, 0);
+  border-width: 1px;
+  float: left;
+  width: 25%;
+  height: 50px;
+  cursor: pointer;
+  outline: none;
+  color: var(--lightblue);
+  opacity: 0;
+  font-size: 14px;
+}
+
+.tablink:hover {
+  border-color: var(--lightblue);
+  background-color: rgba(168, 235, 237, 0.15);
+  transition-duration: 0.5s;
+}
+
+.lightToggle {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  float: right;
+  outline: none;
+  margin-right: 2%;
+  margin-top: 15px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  height: 30px;
+  width: 80px;
+  cursor: pointer;
+}
+
+.content {
+  pointer-events: none;
+  opacity: 0;
+  animation-name: menu-load;
+  animation-delay: 7s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  padding-top: 5%;
+}
+
+#sun {
+  fill: var(--white);
+}
+
+#line {
+  fill: var(--coral);
+}
+
+#moon {
+  fill: var(--navy);
+}
+
+#about {
+  animation-name: menu-load;
+  animation-duration: 4s;
+  animation-delay: 6s;
+  animation-fill-mode: both;
+}
+
+#works {
+  animation-name: menu-load;
+  animation-duration: 4s;
+  animation-delay: 5s;
+  animation-fill-mode: forwards;
+}
+
+#gallery {
+  animation-name: menu-load;
+  animation-duration: 4s;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+#contact {
+  animation-name: menu-load;
+  animation-duration: 4s;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes menu-load {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
