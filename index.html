@@ -3,7 +3,10 @@
 <head>
   <script language="javascript" type="text/javascript" src="p5.js"></script>
   <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-deferred@1"></script>
   <link rel="stylesheet" type="text/css" href="designer.css">
+  <title>YUKARI</title>
 </head>
 
 
@@ -47,6 +50,7 @@
 
     <div class="coding-stuff">
       <h2>My coding proficiency...</h2>
+      <div class="chart-container" style="margin:auto;width:25%;"><canvas id="chart"></canvas></div>
     </div>
   </div>
 
@@ -78,6 +82,12 @@
   <div class="content">GALLERY</div>
   <div class="content" style="padding-bottom:2000px">CONTACT</div>
 
+  <script>
+  //force scroll to top when reloading
+    window.onbeforeunload = function() {
+      window.scrollTo(0,0);
+    }
+  </script>
 
   <script>
     document.querySelector('.lightToggle').addEventListener('click', () => {
@@ -85,6 +95,47 @@
     })
   </script>
 
+  <script>
+    let chart = document.getElementById('chart').getContext('2d');
+
+    let codeChart = new Chart('chart', {
+      type: 'horizontalBar',
+      data: {
+        labels: ['HTML/CSS', 'Go', 'SQL', 'Java', 'Python', 'JavaScript', 'C++', 'PHP', ' '], // 'Java', 'Python', 'JavaScript', 'SQL', 'Go', 'C++', 'PHP', ' '],
+        datasets: [{
+          data: [10, 10, 9, 8, 7, 6, 5, 4, 2], // 10,8, 7, 7, 8, 10, 4, 10],
+          backgroundColor: 'rgb(168, 235, 237)',
+          barThickness: 6
+        }]
+      },
+      options: {
+        legend: {
+          display: false
+        },
+        scales: {
+          xAxes: [{
+            gridLines: {
+              display: false,
+            },
+            ticks: {
+              display: false
+            }
+          }],
+          yAxes: [{
+            gridLines: {
+              display: false
+            }
+          }]
+        },
+        plugins: {
+          deferred: {
+            yOffset: '100%',
+            delay: 250
+          }
+        }
+      }
+    });
+  </script>
 </body>
 
 </html>

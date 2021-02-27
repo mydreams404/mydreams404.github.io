@@ -81,7 +81,7 @@ var underline = function(p) {
     if (loadText == true) {
       p.line(x, 1, p.windowWidth, 1);
       if (x > 0)
-        x -= 5;
+        x -= 20;
     }
   };
 };
