@@ -18,9 +18,11 @@ body {
   margin: 0;
   transition: 1s;
   background-color: var(--background-color);
-  border-color: var(border-color);
+  border-color: var(background-color);
   overflow-x: hidden;
   color: var(--navy);
+  letter-spacing: 1px;
+  line-height: 1.5;
 }
 
 body.dark {
@@ -36,8 +38,8 @@ div {
 p {
   z-index: -1;
   text-align: justify;
-  margin-right: 20px;
-  margin-left: 15px;
+  margin-right: 15%;
+  margin-left: 15%;
 }
 
 h1 {
@@ -50,10 +52,11 @@ h1 {
 h2 {}
 
 h3 {
-  margin-left: 15px;
+  margin-left: 10%;
+  font-weight: normal;
 }
 
-hr {
+/* hr {
   height: 0px;
   opacity: 0;
   border-top: solid;
@@ -66,14 +69,14 @@ hr {
   animation-delay: 10s;
   animation-duration: 1s;
   animation-fill-mode: forwards;
-}
+} */
 
 svg {
   fill: var(--white);
 }
 
-img{
-  height:500px;
+img {
+  height: 500px;
   margin-left: 10%;
 }
 
@@ -86,10 +89,26 @@ img{
 .content-header {
   /*JUST DO TEXT STROKE IN P5JS*/
   color: var(--lightblue);
-  margin-left: 10px;
+  margin-left: 10%;
+  font-size: 70px;
   /* text-shadow: var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px, var(--lightblue) 0px 0px 1px,
   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,
   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px; */
+}
+
+.content {
+  pointer-events: none;
+  opacity: 0;
+  animation-name: menu-load;
+  animation-delay: 7s;
+  animation-duration: 4s;
+  animation-fill-mode: forwards;
+  padding-top: 5%;
+}
+
+.works-content-container{
+  margin-left: 20%;
+  margin-right:20%;
 }
 
 #particle-container {
@@ -110,18 +129,25 @@ img{
 
 .tab-container {
   /*make a rect with same bg colour?*/
+  background-color: var(--background-color);
   z-index: 1;
   position: -webkit-sticky;
   position: sticky;
-  top: 5%;
-  /* background-color: var(--navy); */
+  top: 0%;
+  height: 50px;
+  width: 100%;
+  border-bottom-width: 1px;
+  border-bottom-color: var(--lightblue);
+  animation-name: border-load;
+  animation-delay: 10s;
+  animation-fill-mode: forwards;
 }
 
 .tablink {
   /* position: sticky;
   top: 5%; */
   font-family: "Georgia", Times, Serif;
-  background-color: var(--background-color);
+  background-color: rgba(0, 0, 0, 0);
   border: solid;
   border-color: rgba(0, 0, 0, 0);
   border-width: 1px;
@@ -133,6 +159,7 @@ img{
   color: var(--coral);
   opacity: 0;
   font-size: 20px;
+  /* margin-top:5%; */
 }
 
 .tablink:hover {
@@ -142,29 +169,21 @@ img{
 }
 
 .lightToggle {
+  z-index: 2;
+  position: fixed;
   display: flex;
   justify-content: space-around;
   align-items: center;
   float: right;
   outline: none;
-  margin-right: 2%;
-  margin-top: 15px;
+  right:0;
+  margin-top: 8px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0);
   border: none;
   height: 30px;
   width: 105px;
   cursor: pointer;
-}
-
-.content {
-  pointer-events: none;
-  opacity: 0;
-  animation-name: menu-load;
-  animation-delay: 7s;
-  animation-duration: 4s;
-  animation-fill-mode: forwards;
-  padding-top: 5%;
 }
 
 #sun {
@@ -214,5 +233,17 @@ img{
 
   to {
     opacity: 1;
+  }
+}
+
+@keyframes border-load {
+  from {
+    opacity: 0;
+    border-bottom-style: none;
+  }
+
+  to {
+    opacity: 1;
+    border-bottom-style: solid;
   }
 }

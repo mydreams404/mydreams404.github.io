@@ -1,5 +1,6 @@
 // NAME TITLE
 var loadText = false;
+frameRate = 30;
 
 var title = function(p) {
   let font;
