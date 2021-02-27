@@ -14,6 +14,7 @@ body {
   --background-color: var(--white);
   --border-color: var(--background-color);
   font-family: "Times New Roman", Times, Serif;
+  font-size: 18px;
   margin: 0;
   transition: 1s;
   background-color: var(--background-color);
@@ -41,7 +42,9 @@ p {
 
 h1 {
   text-align: center;
-  color: var(--green);
+  color: var(--lightblue);
+  font-size: 128px;
+  font-weight: normal;
 }
 
 h2 {}
@@ -67,6 +70,11 @@ hr {
 
 svg {
   fill: var(--white);
+}
+
+img{
+  height:500px;
+  margin-left: 10%;
 }
 
 .menu-container {
@@ -100,7 +108,8 @@ svg {
   margin: 0 auto;
 }
 
-.tab-container { /*make a rect with same bg colour?*/
+.tab-container {
+  /*make a rect with same bg colour?*/
   z-index: 1;
   position: -webkit-sticky;
   position: sticky;
@@ -144,7 +153,7 @@ svg {
   background-color: rgba(0, 0, 0, 0);
   border: none;
   height: 30px;
-  width: 80px;
+  width: 105px;
   cursor: pointer;
 }
 
