@@ -2,6 +2,19 @@
 
 <head>
   <link rel="stylesheet" type="text/css" href="designer.css">
+
+  <style>
+    img {
+      float: none;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 25vw;
+      padding-top: 50px;
+      padding-bottom: 50px;
+    }
+
+  </style>
 </head>
 
 <body>
@@ -20,19 +33,61 @@
     </button>
   </div>
 
-  <a href="index.html"><div>
-    <h1 style="padding-top:50px">Y U K A R I</h1>
-  </div></a>
+  <a href="index.html">
+    <div>
+      <h1 style="padding-top:50px">Y U K A R I</h1>
+    </div>
+  </a>
 
-  <div class="tab-container" style="animation-delay:0s;height:1px">
-    <!-- <a href="index.html#about-content"><button class="tablink" id="about" style="animation-delay:0s">ABOUT</button></a>
+  <div class="tab-container" style="animation-delay:0s">
+    <a href="index.html#about-content"><button class="tablink" id="about" style="animation-delay:0s">ABOUT</button></a>
     <a href="index.html#works-content"><button class="tablink" id="works" style="animation-delay:0s">WORKS</button></a>
     <a href="index.html#gallery-content"><button class="tablink" id="gallery" style="animation-delay:0s">GALLERY</button></a>
-    <a href="index.html#contact-content"><button class="tablink" id="contact" style="animation-delay:0s">CONTACT</button></a> -->
+    <a href="index.html#contact-content"><button class="tablink" id="contact" style="animation-delay:0s">CONTACT</button></a>
   </div>
 
   <div>
+    <h1 class="page-title">MoodApp <small><sub>(ongoing)</sub></small></h1>
+    <h2 class="content-header">Where it started... </h2>
+    <h3 class="emphasis">the purpose...</h3>
+    <p>To track patterns in daily mood and presenting them in an aesthetically-pleasing way. This idea was born from my personal desire to create beauty out of human emotional experiences, whether they be positive or negative.</p><br>
+    <h3 class="emphasis">the solution...</h3>
+    <p>The solution will be a mobile application closely resembling a calendar. Once a day, the user can set a colour for the day that they feel most accurately represents their overall emotion. Once a set number of days have been logged, the system
+      will generate an image or animation using the colours inputted by the user.</p>
+    <p>
+    <ul>Here is a list of the features agreed on so far:
+      <div style="margin-left:25%">
+        <li>Can switch between ‘colour selection only’ or ‘notes mode’</li>
+        <li>Can view mood over the course of use and compare</li>
+        <li>Widget to input mood with one touch</li>
+        <li>Notification to remind you to input mood daily (optional)</li>
+        <li>Rearranges mood data to make it look cool/pretty/nice</li>
+        <li>Variety of colour palettes to suit your taste</li>
+        <li>Presents mood data as a wallpaper format</li>
+        <li><del>User dictates what moods the colour represents</del></li>
+        <li>Animations are abstract so user can interpret them for themselves</li>
+        <li>Reveal art to user based on number of inputs in the application that is then saved in a gallery for later viewing</li>
+        <li>Art/animations will be written in P5.js</li>
+      </div>
+    </ul>
+    </p>
 
+    <h2 class="content-header">How it's going... </h2>
+    <h3><b>Project still undergoing. Check back later!</b></h3><br>
+    <h3 class="emphasis">initial prototype...</h3>
+    <img style="width:50vw" src="images/moodapp-drawing.jpg">
+    <h3 class="emphasis">digital prototypes...</h3>
+    <h4 class="emphasis">home</h4><br>
+    <p>
+      <img style="float:left;padding-right:50px;" src="images/moodapp-home-lite.png" alt="lite mode">
+      <img src="images/moodapp-home-dark.png" alt="dark mode">
+    </p>
+    <h4 class="emphasis">gallery</h4>
+    <p><img src="images/moodapp-gallery-page.png"></p>
+    <h4 class="emphasis">statistics</h4>
+    <p><img src="images/moodapp-stats.png"></p>
+    <h4 class="emphasis">settings</h4>
+    <p><img src="images/moodapp-settings.png"></p>
   </div>
 
   <script>
