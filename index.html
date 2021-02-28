@@ -48,45 +48,45 @@
     <p>Anyway, thank you for taking the time to read this and look at my portfolio. Feel free to poke around or contact me with comments or queries.</p>
 
     <div class="coding-stuff">
-      <p style="margin-left:35%"><strong>My coding proficiency...</strong></p>
+      <p style="margin-left:35%"><i><strong>My coding proficiency...</i></strong></p>
       <div class="chart-container" style="margin:auto;width:30%;"><canvas id="chart"></canvas></div>
     </div>
   </div>
 
   <div class="content" id="works-content">
     <h2 class="content-header">WORKS</h2>
-    <!-- <h3>Application Development</h3>
-    <h3>Arduino</h3>
-    <h3>Cybersecurity</h3>
-    <h3>Project Management</h3> -->
     <div class="works-content-container">
       <h2>Application Development</h2>
-      <h3>Turning your emotions into something beautiful.</h3>
-      <img src="images/moodapp-calendar.png">
-      <img src="images/moodapp-gallery.png" style="width:541px;height:400px;">
-      <h3><i>Cook With Mi</i> - A brand new way to learn how to cook.</h3>
-      <img src="images/CWM-intro.png">
-      <img src="images/CWM-lesson.png">
-      <img src="images/CWM-community.png">
-      <h3><i>Train InfoStop</i> - A new installment in Sydney's train stations to improve the commuter experience.</h3>
-      <img src="images/infostop-home.png">
-      <img src="images/infostop-map.jpg">
+      <div class="img-divs">
+        <h3><strong><i>MoodApp</strong></i> - Turning your emotions into something beautiful.</h3>
+        <h4>See more</h4>
+        <img class="img-container" src="images/moodapp-calendar.png">
+        <img class="img-container" src="images/moodapp-gallery.png" style="width:300px;height:221px">
+      </div>
+      <br>
+      <div class="img-divs">
+        <h3 style="float:right"><strong><i>Cook With Mi</i></strong> - A brand new way to learn how to cook.</h3>
+        <h4 style="float:right;text-align:right;position:relative;top:50px;left:30%">See more</h4>
+        <img class="img-container" src="images/CWM-intro.png" style="float:left">
+        <img class="img-container" src="images/CWM-lesson.png" style="float:left">
+        <img class="img-container" src="images/CWM-community.png" style="padding-left:10px;float:left">
+      </div>
+      <br>
+      <div class="img-divs">
+        <h3><strong><i>Train InfoStop</i></strong> - A new installment in Sydney's train stations to improve the commuter experience.</h3>
+        <h4>See more</h4>
+        <img class="img-container" style="width:300px;height:auto;margin-top:50px" src="images/infostop-map.jpg">
+        <img class="img-container" src="images/infostop-home.png">
+      </div>
+      <br>
       <h2>Arduino</h2>
       <h3>BPM Calculator</h3>
-      <h4>See more</h4>
       <h2>Cybersecurity</h2>
       <h3>See my journey through ethical hacking.</h3>
     </div>
   </div>
   <div class="content">GALLERY</div>
   <div class="content" style="padding-bottom:2000px">CONTACT</div>
-
-  <script>
-  //force scroll to top when reloading
-    window.onbeforeunload = function() {
-      window.scrollTo(0,0);
-    }
-  </script>
 
   <script>
     document.querySelector('.lightToggle').addEventListener('click', () => {
@@ -100,9 +100,9 @@
     let codeChart = new Chart('chart', {
       type: 'horizontalBar',
       data: {
-        labels: ['HTML/CSS', 'Go', 'SQL', 'Java', 'Python', 'JavaScript', 'C++', 'PHP', ' '], // 'Java', 'Python', 'JavaScript', 'SQL', 'Go', 'C++', 'PHP', ' '],
+        labels: ['HTML/CSS', 'Go', 'SQL', 'Java', 'Python', 'JavaScript', 'C++', 'PHP', 'Bash', ' '], // 'Java', 'Python', 'JavaScript', 'SQL', 'Go', 'C++', 'PHP', ' '],
         datasets: [{
-          data: [10, 10, 9, 8, 7, 6, 5, 4, 2], // 10,8, 7, 7, 8, 10, 4, 10],
+          data: [10, 10, 9, 8, 7, 6, 5, 4, 4, 2], // 10,8, 7, 7, 8, 10, 4, 10],
           backgroundColor: '#EE7674',
           barThickness: 6
         }]
@@ -134,6 +134,13 @@
         }
       }
     });
+  </script>
+
+  <script>
+    //force scroll to top when reloading
+    window.onbeforeunload = function() {
+      window.scrollTo(0, 0);
+    }
   </script>
 </body>
 

@@ -56,28 +56,22 @@ h3 {
   font-weight: normal;
 }
 
-/* hr {
-  height: 0px;
-  opacity: 0;
-  border-top: solid;
-  border-width: 0.5px;
-  color: black;
-  background-color: red;
-  border-color: var(--lightblue);
-  margin-bottom: -20px;
-  animation-name: menu-load;
-  animation-delay: 10s;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-} */
+h4{
+  float: left;
+  font-weight: normal;
+  margin-left:15%;
+  line-height: 0;
+}
 
 svg {
   fill: var(--white);
 }
 
 img {
-  height: 500px;
-  margin-left: 10%;
+  width: 150px;
+  margin: 0;
+  float: right;
+  /* padding-right: 10%; */
 }
 
 .menu-container {
@@ -109,6 +103,11 @@ img {
 .works-content-container{
   margin-left: 20%;
   margin-right:20%;
+}
+
+.img-divs{
+  height: 60%;
+  /* height: 450px; */
 }
 
 #particle-container {
@@ -177,6 +176,7 @@ img {
   float: right;
   outline: none;
   right:0;
+  margin:0;
   margin-top: 8px;
   border-radius: 20px;
   background-color: rgba(0, 0, 0, 0);
