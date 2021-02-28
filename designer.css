@@ -52,7 +52,7 @@ h1 {
 h2 {}
 
 h3 {
-  margin-left: 10%;
+  margin-left: 15%;
   font-weight: normal;
 }
 
@@ -60,7 +60,7 @@ h4{
   float: left;
   font-weight: normal;
   margin-left:15%;
-  line-height: 0;
+  /* line-height: 0; */
 }
 
 svg {
@@ -68,10 +68,16 @@ svg {
 }
 
 img {
-  width: 150px;
+  width: 10vw;
   margin: 0;
   float: right;
   /* padding-right: 10%; */
+}
+
+a{
+  text-decoration: none;
+  color: var(--coral);
+  pointer-events: auto;
 }
 
 .menu-container {
@@ -103,12 +109,19 @@ img {
 .works-content-container{
   margin-left: 20%;
   margin-right:20%;
+  clear:both;
 }
 
-.img-divs{
-  height: 60%;
-  /* height: 450px; */
+.content-divs{
+  height: 60vh;
+  clear:none;
 }
+
+/* .img-divs{
+  width: 10vw;
+  margin: 0;
+  float: right;
+} */
 
 #particle-container {
   display: flex;
