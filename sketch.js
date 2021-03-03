@@ -78,20 +78,18 @@ var underline = function(p) {
 
   p.draw = function() {
     p.stroke('#a8ebed');
-    p.strokeWeight(1);
-    if (loadText == true) {
-      p.line(x, 1, p.windowWidth, 1);
-      if (x > 0)
-        x -= 20;
-    }
+    p.strokeWeight(3);
+    p.line(x, 1, p.windowWidth, 1);
+    if (x > 0)
+      x -= 10;
   };
 };
 var myp5 = new p5(underline, 'line-container');
 
 // BG PARTICLES
 
-var particles = function(p){
-  class Particle{
+var particles = function(p) {
+  class Particle {
     constructor() { //sets co-ordinates, radius and speed
       this.x = p.random(0, p.width);
       this.y = p.random(0, p.height);
@@ -129,7 +127,7 @@ var particles = function(p){
   let particles = [];
 
   p.setup = function() {
-    let canvas = p.createCanvas(p.windowWidth, p.windowHeight*0.8);
+    let canvas = p.createCanvas(p.windowWidth, p.windowHeight * 0.8);
     for (let i = 0; i < p.windowWidth / 15; i++)
       particles.push(new Particle());
   }
