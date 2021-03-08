@@ -13,7 +13,7 @@ html {
 body {
   --background-color: var(--white);
   --border-color: var(--background-color);
-  font-family: "Times New Roman", Times, Serif;
+  font-family: "Garamond", Times, Serif;
   font-size: 18px;
   margin: 0;
   transition: 1s;
@@ -43,6 +43,7 @@ p {
 }
 
 h1 {
+  font-family: Times, serif;
   text-align: center;
   color: var(--lightblue);
   font-size: 128px;
@@ -50,6 +51,7 @@ h1 {
 }
 
 h2 {
+  font-family: Times, serif;
   letter-spacing: 2.5px;
 }
 
@@ -130,6 +132,28 @@ ul {
   font-style: italic;
   font-weight: bolder;
   text-shadow: 2px 2px var(--coral)
+}
+
+.gallery-grid{
+  display: -ms-grid;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-gap: 1.5rem;
+  justify-items: center;
+  padding: 0;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.gallery-img{
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+}
+
+.gallery-img:hover{
+  opacity: 0.7;
+  transition: 0.3s;
 }
 
 #line-container{
