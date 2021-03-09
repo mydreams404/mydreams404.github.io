@@ -108,7 +108,7 @@ ul {
   pointer-events: none;
   opacity: 0;
   animation-name: menu-load;
-  animation-delay: 7s;
+  animation-delay: 3s;
   animation-duration: 4s;
   animation-fill-mode: forwards;
   padding-top: 5%;
@@ -274,29 +274,48 @@ ul {
 #about {
   animation-name: menu-load;
   animation-duration: 4s;
-  animation-delay: 6s;
+  animation-delay: 2s;
   animation-fill-mode: both;
 }
 
 #works {
   animation-name: menu-load;
   animation-duration: 4s;
-  animation-delay: 5s;
+  animation-delay: 1.5s;
   animation-fill-mode: forwards;
 }
 
 #gallery {
   animation-name: menu-load;
   animation-duration: 4s;
-  animation-delay: 4s;
+  animation-delay: 1s;
   animation-fill-mode: forwards;
 }
 
 #contact {
   animation-name: menu-load;
   animation-duration: 4s;
-  animation-delay: 3s;
+  animation-delay: 0.5s;
   animation-fill-mode: forwards;
+}
+
+#btn-top{
+  position: fixed;
+  bottom: 20px;
+  right: 5%;
+  z-index: 99;
+  display: none;
+  cursor: pointer;
+  background-color: rgba(168, 235, 237, 0);
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+#btn-top:hover{
+  opacity: 0.5;
+  transition: 0.2s;
 }
 
 @keyframes menu-load {
