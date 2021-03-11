@@ -107,7 +107,7 @@ ul {
   pointer-events: none;
   opacity: 0;
   animation-name: menu-load;
-  animation-delay: 3s;
+  /* animation-delay: 3s; */
   animation-duration: 4s;
   animation-fill-mode: forwards;
   padding-top: 5%;
@@ -189,7 +189,7 @@ ul {
 #content-header path{
   stroke-dasharray:500px;
   stroke-dashoffset:500px;
-  animation: line-animation 4s ease forwards 4s;
+  animation: line-animation 4s ease forwards 1s;
 }
 
 #yukari{
