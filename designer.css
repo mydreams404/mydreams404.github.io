@@ -22,7 +22,8 @@ body {
   background-color: var(--background-color);
   border-color: var(background-color);
   overflow-x: hidden;
-  color: var(--navy);
+  --text-color: var(--navy);
+  color: var(--text-color);
   letter-spacing: 1px;
   line-height: 1.8;
 }
@@ -30,7 +31,8 @@ body {
 body.dark {
   --background-color: var(--navy);
   border-color: var(--navy);
-  color: var(--lightblue);
+  --text-color: var(--lightblue);
+  color: var(--text-color);
 }
 
 div {
@@ -91,6 +93,30 @@ ul {
   margin-left: 10%;
 }
 
+a.link-underline {
+  margin: 20px;
+  font-size: 22px;
+  position: relative;
+  font-weight: bold;
+}
+
+a.link-underline:before{
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--coral);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+a.link-underline:hover:before{
+  visibility:visible;
+  width:100%;
+}
+
 .menu-container {
   position: absolute;
   height: 100%;
@@ -102,7 +128,6 @@ ul {
   margin-left: 10%;
   font-size: 70px;
 } */
-
 .content {
   pointer-events: none;
   opacity: 0;
@@ -133,10 +158,10 @@ ul {
   text-shadow: 2px 2px var(--coral)
 }
 
-.gallery-grid{
+.gallery-grid {
   display: -ms-grid;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-gap: 1.5rem;
   justify-items: center;
   padding: 0;
@@ -144,19 +169,19 @@ ul {
   margin-right: 20%;
 }
 
-.gallery-img{
+.gallery-img {
   height: 200px;
   width: 200px;
   object-fit: cover;
 }
 
-.gallery-img:hover{
+.gallery-img:hover {
   opacity: 0.7;
   transition: 0.3s;
 }
 
-#line-container{
-  position:sticky;
+#line-container {
+  position: sticky;
   top: 50px;
 }
 
@@ -181,58 +206,58 @@ ul {
   margin: 0 auto;
 }
 
-#content-header{
+#content-header {
   margin-left: 10%;
   fill: transparent;
 }
 
-#content-header path{
-  stroke-dasharray:500px;
-  stroke-dashoffset:500px;
+#content-header path {
+  stroke-dasharray: 500px;
+  stroke-dashoffset: 500px;
   animation: line-animation 4s ease forwards 1s;
 }
 
-#yukari{
+#yukari {
   position: relative;
   top: 0;
-  left:50%;
-  height:80%;
+  left: 50%;
+  height: 80%;
   fill: transparent;
   transform: translate(-50%, 0%);
   animation: fill-title ease 10s forwards 6s;
 }
 
-#yukari path:nth-child(1){
+#yukari path:nth-child(1) {
   stroke-dasharray: 431px;
   stroke-dashoffset: 431px;
   animation: line-animation 2s ease forwards;
 }
 
-#yukari path:nth-child(2){
+#yukari path:nth-child(2) {
   stroke-dasharray: 508px;
   stroke-dashoffset: 508px;
   animation: line-animation 2s ease forwards 1s;
 }
 
-#yukari path:nth-child(3){
+#yukari path:nth-child(3) {
   stroke-dasharray: 602px;
   stroke-dashoffset: 602px;
   animation: line-animation 2s ease forwards 2s;
 }
 
-#yukari path:nth-child(4){
+#yukari path:nth-child(4) {
   stroke-dasharray: 472px;
   stroke-dashoffset: 472px;
   animation: line-animation 2s ease forwards 3s;
 }
 
-#yukari path:nth-child(5){
+#yukari path:nth-child(5) {
   stroke-dasharray: 549px;
   stroke-dashoffset: 549px;
   animation: line-animation 2s ease forwards 4s;
 }
 
-#yukari path:nth-child(6){
+#yukari path:nth-child(6) {
   stroke-dasharray: 278px;
   stroke-dashoffset: 278px;
   animation: line-animation 2s ease forwards 5s;
@@ -306,7 +331,8 @@ ul {
 .footer {
   /* text-align: center; */
   opacity: 0.5;
-  margin-left:15px;margin-right: 15px;
+  margin-left: 15px;
+  margin-right: 15px;
   /* width: 45px;
   height: 45px;
   margin: auto; */
@@ -356,7 +382,7 @@ ul {
   animation-fill-mode: forwards;
 }
 
-#btn-top{
+#btn-top {
   position: fixed;
   bottom: 20px;
   right: 5%;
@@ -370,7 +396,7 @@ ul {
   font-size: inherit;
 }
 
-#btn-top:hover{
+#btn-top:hover {
   opacity: 0.5;
   transition: 0.2s;
 }
@@ -397,14 +423,14 @@ ul {
   }
 }
 
-@keyframes line-animation{
-  to{
-    stroke-dashoffset:0;
+@keyframes line-animation {
+  to {
+    stroke-dashoffset: 0;
   }
 }
 
-@keyframes fill-title{
-  to{
+@keyframes fill-title {
+  to {
     fill: var(--lightblue)
   }
 }
