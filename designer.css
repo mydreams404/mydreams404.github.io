@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
 :root {
   --white: #F9F7F1;
   --green: #266320;
@@ -13,8 +15,8 @@ html {
 body {
   --background-color: var(--white);
   --border-color: var(--background-color);
-  font-family: "Garamond", Times, Serif;
-  font-size: 18px;
+  font-family: "Montserrat", Times, Serif;
+  font-size: 16px;
   margin: 0;
   transition: 1s;
   background-color: var(--background-color);
@@ -22,7 +24,7 @@ body {
   overflow-x: hidden;
   color: var(--navy);
   letter-spacing: 1px;
-  line-height: 1.5;
+  line-height: 1.6;
 }
 
 body.dark {
@@ -58,7 +60,7 @@ h2 {
 
 h3 {
   margin-left: 15%;
-  font-weight: normal;
+  /* font-weight: normal; */
 }
 
 h4 {
@@ -249,11 +251,12 @@ ul {
 }
 
 .footer {
-  text-align: center;
+  /* text-align: center; */
   opacity: 0.5;
-  width: 45px;
+  margin-left:15px;margin-right: 15px;
+  /* width: 45px;
   height: 45px;
-  margin: auto;
+  margin: auto; */
 }
 
 .footer:hover {
