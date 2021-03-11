@@ -97,15 +97,11 @@ ul {
   /* pointer-events: none; */
 }
 
-.content-header {
-  /*JUST DO TEXT STROKE IN P5JS*/
+/* .content-header {
   color: var(--lightblue);
   margin-left: 10%;
   font-size: 70px;
-  /* text-shadow: var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px, var(--lightblue) 0px 0px 1px,
-  var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,
-  var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px,   var(--lightblue) 0px 0px 1px; */
-}
+} */
 
 .content {
   pointer-events: none;
@@ -185,6 +181,63 @@ ul {
   margin: 0 auto;
 }
 
+#content-header{
+  margin-left: 10%;
+  fill: transparent;
+}
+
+#content-header path{
+  stroke-dasharray:500px;
+  stroke-dashoffset:500px;
+  animation: line-animation 4s ease forwards 4s;
+}
+
+#yukari{
+  position: relative;
+  top: 0;
+  left:50%;
+  height:80%;
+  fill: transparent;
+  transform: translate(-50%, 0%);
+  animation: fill-title ease 10s forwards 6s;
+}
+
+#yukari path:nth-child(1){
+  stroke-dasharray: 431px;
+  stroke-dashoffset: 431px;
+  animation: line-animation 2s ease forwards;
+}
+
+#yukari path:nth-child(2){
+  stroke-dasharray: 508px;
+  stroke-dashoffset: 508px;
+  animation: line-animation 2s ease forwards 1s;
+}
+
+#yukari path:nth-child(3){
+  stroke-dasharray: 602px;
+  stroke-dashoffset: 602px;
+  animation: line-animation 2s ease forwards 2s;
+}
+
+#yukari path:nth-child(4){
+  stroke-dasharray: 472px;
+  stroke-dashoffset: 472px;
+  animation: line-animation 2s ease forwards 3s;
+}
+
+#yukari path:nth-child(5){
+  stroke-dasharray: 549px;
+  stroke-dashoffset: 549px;
+  animation: line-animation 2s ease forwards 4s;
+}
+
+#yukari path:nth-child(6){
+  stroke-dasharray: 278px;
+  stroke-dashoffset: 278px;
+  animation: line-animation 2s ease forwards 5s;
+}
+
 .tab-container {
   /*make a rect with same bg colour?*/
   background-color: var(--background-color);
@@ -194,7 +247,7 @@ ul {
   top: 0%;
   height: 50px;
   width: 100%;
-  border-bottom-width: 1px;
+  border-bottom-width: 0.5px;
   border-bottom-color: var(--lightblue);
   animation-name: border-load;
   animation-delay: 10s;
@@ -341,5 +394,17 @@ ul {
   to {
     opacity: 1;
     border-bottom-style: solid;
+  }
+}
+
+@keyframes line-animation{
+  to{
+    stroke-dashoffset:0;
+  }
+}
+
+@keyframes fill-title{
+  to{
+    fill: var(--lightblue)
   }
 }

@@ -2,70 +2,6 @@
 var loadText = false;
 frameRate = 30;
 
-var title = function(p) {
-  let font;
-  var points;
-  var pos = 0;
-  var speed = 15;
-  var grad = 0;
-
-  p.preload = function() {
-    font = p.loadFont('assets/TIMES.TTF');
-  };
-
-  p.setup = function() {
-    let canvas = p.createCanvas(800, 150);
-    // canvas.parent('title-container');
-    p.background(200, 0);
-    // frameRate(60);
-    p.textSize(128);
-    p.fill(255, 0);
-
-    points = font.textToPoints('Y U K A R I', 50, 128, 128, {
-      sampleFactor: 1
-    });
-    // console.log(points);
-
-    for (var i = 0; i < points.length; i++) {
-      var pt = points[i];
-      var pt2 = points[p.constrain(i + 1, 1, points.length - 1)];
-    }
-
-  };
-
-  p.draw = function() {
-
-    p.stroke('#a8ebed');
-    p.strokeWeight(1);
-
-    var pt = points[p.constrain(pos, 0, points.length - 1)];
-    p.point(pt.x, pt.y);
-
-    for (var i = 0; i < pos; i++) {
-      pt = points[i];
-      p.point(pt.x, pt.y);
-    }
-
-    pos = p.constrain(pos + speed, 0, points.length - 1);
-    if (pos == points.length - 1)
-      loadText = true;
-
-    if (loadText == true)
-      p.writeText();
-  };
-
-  p.writeText = function() {
-    p.clear();
-    p.textFont(font);
-    p.textSize(128);
-    p.fill(168, 229, 237, grad);
-    p.text('Y U K A R I', 50, 128);
-    if (grad < 255) grad++;
-  }
-
-};
-var myp5 = new p5(title, 'title-container');
-
 // UNDERLINE
 var underline = function(p) {
   var x = p.windowWidth;
@@ -81,7 +17,7 @@ var underline = function(p) {
     p.strokeWeight(3);
     p.line(x, 1, p.windowWidth, 1);
     if (x > 0)
-      x -= 10;
+      x -= 5;
   };
 };
 var myp5 = new p5(underline, 'line-container');
